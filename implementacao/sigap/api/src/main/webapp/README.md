@@ -15,7 +15,7 @@ Algumas dicas simples para trabalhar com angularJS. Dicas retiradas do style gui
 │   │   │     |    ├── http.config.js 
 |   |   |
 │   │   ├── components
-│   │   │     ├── paciente					         * 	
+│   │   │     ├── paciente					  * 	
 │   │   │     │    ├─ pacintes.controller.js			   ** 
 │   │	│     │	   ├─ pacintes.html
 │   │	│     │	   ├─ pacinte.edit.controller.js
@@ -27,7 +27,8 @@ Algumas dicas simples para trabalhar com angularJS. Dicas retiradas do style gui
 │   │   │     │
 ```
 <b>*</b>Defina uma pasta por feature <br>
-<b>**</b>Crie o nomes de arquivos separando por ponto nome do tipo: ex: feature.controller.js | feature.service.js | feature.filter.js
+<b>**</b>Crie o nomes de arquivos separando por ponto o nome do tipo ``` feature.tipo.js``` ex: feature.controller.js | feature.service.js | feature.filter.js | feature.module.js<br>
+<b>**</b>Para <b>arquivos</b> js com com mais de uma palavra, separe com "-", ou seja, invês de ```headerNotification.directive.js``` use ```header-notification.directive.js```.
 
 ### Princípio da responsabilidade única
 
@@ -106,6 +107,22 @@ function SomeController() { }
 
     function logger() { }
 })();
+```
+
+### Nome de Controllers | Services 
+<b>Use PadraoCamelCase para controladores, pois eles são construtores.</b>
+
+```js
+/**
+ * recommended
+ */
+
+// avengers.controller.js
+angular
+    .module
+    .controller('HeroAvengersController', HeroAvengersController);
+
+function HeroAvengersController() { }
 ```
 
 ### Controllers
