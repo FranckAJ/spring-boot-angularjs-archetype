@@ -1,7 +1,7 @@
-Dicas para manter o Padrão e evitar dores de cabeça
+Dicas para manter padrão e evitar dores de cabeça
 ===============
 
-Algumas dicas simples para trabalhar com angularJS, dicas retiradas do style guides do angulae, especificadas por John Papa. Todas as styles guides: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md 
+Algumas dicas simples para trabalhar com angularJS. Dicas retiradas do style guides do angular, especificadas por John Papa. Todas as styles guides: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md 
 
 ### Estrutura e nomeclatura de nomes de arquivos
 
@@ -15,8 +15,8 @@ Algumas dicas simples para trabalhar com angularJS, dicas retiradas do style gui
 │   │   │     |    ├── http.config.js 
 |   |   |
 │   │   ├── components
-│   │   │     ├── paciente					<b>*</b> 	
-│   │   │     │    ├─ pacintes.controller.js			<b>**</b> 
+│   │   │     ├── paciente					         * 	
+│   │   │     │    ├─ pacintes.controller.js			   ** 
 │   │	│     │	   ├─ pacintes.html
 │   │	│     │	   ├─ pacinte.edit.controller.js
 │   │	│     │	   ├─ pacinte.edit.html
@@ -26,7 +26,7 @@ Algumas dicas simples para trabalhar com angularJS, dicas retiradas do style gui
 │   │   │     │    ├─ pacinte.service.js
 │   │   │     │
 ```
-<b>*</b>Defina uma pasta por feature
+<b>*</b>Defina uma pasta por feature <br>
 <b>**</b>Crie o nomes de arquivos separando por ponto nome do tipo: ex: feature.controller.js | feature.service.js | feature.filter.js
 
 ### Princípio da responsabilidade única
@@ -110,7 +110,7 @@ function SomeController() { }
 
 ### Controllers
 
-<b>Troque $scope por controllerAs syntax.</br> Use ```vm``` no lugar do ```$scope```, Controller são construídos, renovados e provêem de uma instância única. Sendo assim o `controllerAs` é mais próximo de um construtor JavaScript do que `$scope`.  Ele promove o uso de binding com objetos na view através de pontos, ex. customer.name ao invés de name, isto facilita leitura, contexto e evita problemas de referência.
+<b>Troque $scope por controllerAs syntax.</b> Use ```vm``` no lugar do ```$scope```, Controller são construídos, renovados e provêem de uma instância única. Sendo assim o `controllerAs` é mais próximo de um construtor JavaScript do que `$scope`.  Ele promove o uso de binding com objetos na view através de pontos, ex. customer.name ao invés de name, isto facilita leitura, contexto e evita problemas de referência.
 
 ```js
 /* evitar */
