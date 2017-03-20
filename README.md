@@ -6,13 +6,16 @@ BACKEND
 ===============
 * Java 1.8
 * Spring Boot 1.4.1
- - Spring Web (Spring MVC)
- - Spring Data (JPA)
- - Spring Validation
- - Spring Security
+  -Spring Web (Spring MVC)
+  -Spring Data (JPA)
+  -Spring Validation
+  -Spring Security
+* Spring tests
+* Junit
+* DBunit
  
 ### ESTRUTURA
-Projeto criado em módulos do maven https://maven.apache.org/guides/mini/guide-multiple-modules.html 
+Projeto subdividido em módulos usando o maven https://maven.apache.org/guides/mini/guide-multiple-modules.html 
 ```
 ├── sigap/
 │   |
@@ -56,11 +59,11 @@ Projeto criado em módulos do maven https://maven.apache.org/guides/mini/guide-m
 FRONTEND
 ===============
 * AngularJS 1.X (https://angularjs.org/)
-* Booststrap 3.X (getbootstrap.com)
+* Booststrap 3.X (getbootstrap.com/)
 * Font Awesome 4.7 (http://fontawesome.io/icons/)
 
 ### ESTRUTURA
-Estruta baseada nos style guides do john papa (evagelizador angular).
+Estrutura baseada nos style guides do John Papa (evagelizador angular).
 ```
 ├── webapp/
 │   |
@@ -118,8 +121,8 @@ REQUISITOS
 USO
 ===============
  * clone este repositório;
- * Importe o projeto com maven no eclipse
- * Adicione o tomcat 8
+ * Importe o projeto com maven no eclipse;
+ * Adicione o tomcat 8;
  * Adicione o `datasource` a seguir no arquivo ```context.xml```  do tomcat:
 	```xml
 	<Resource name="jdbc/sigapds" auth="Container" type="javax.sql.DataSource"

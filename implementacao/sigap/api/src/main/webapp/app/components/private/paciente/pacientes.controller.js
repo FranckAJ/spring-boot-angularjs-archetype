@@ -13,14 +13,11 @@
 		var vm = this;
 		vm.pacientes = [];
 
-		vm.dtOptions = DTOptionsBuilder.newOptions().withPaginationType(
-				'full_numbers').withDisplayLength(10).withBootstrap();
+		vm.dtOptions = DTOptionsBuilder.newOptions()
+		.withPaginationType('simple_numbers').withDisplayLength(10).withBootstrap();
 		
-		vm.dtColumnDefs = [ 
-		        DTColumnDefBuilder.newColumnDef(0).notSortable(),
-				DTColumnDefBuilder.newColumnDef(1),
-				DTColumnDefBuilder.newColumnDef(2)];
-
+		vm.dtColumnDefs = [ DTColumnDefBuilder.newColumnDef(0).notSortable() ];
+		
 		vm.buscarPacientes = function() {
 			pacienteService.getPacientes(function(resultado) {
 				vm.pacientes = resultado;
@@ -49,7 +46,7 @@
 		/**
 		 * 
 		 */
-		vm.adicionarItem = function() {
+		vm.adicionarPaciente = function() {
 			var modal = abrirModal({});
 
 			modal.result.then(function(paciente) {
@@ -60,7 +57,7 @@
 		/**
 		 * 
 		 */
-		vm.editarItem = function(paciente) {
+		vm.editarPaciente = function(paciente) {
 			abrirModal(paciente);
 		}
 	});

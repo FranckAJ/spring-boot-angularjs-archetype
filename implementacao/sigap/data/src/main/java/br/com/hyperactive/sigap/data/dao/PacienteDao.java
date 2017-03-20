@@ -9,7 +9,7 @@ import br.com.hyperactive.sigap.domain.entity.Paciente;
 /**
  * 
  * <p>
- * <b> AdmissaoDao </b>
+ * <b> PacienteDao </b>
  * </p>
  *
  * @author <a href="https://github.com/FranckAJ">Franck Aragão</a>

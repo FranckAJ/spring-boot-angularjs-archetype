@@ -7,11 +7,11 @@
  * @author <a href="https://franckaj.github.io/">Franck Aragão</a>
  */
 (function() {
-    var app = angular.module('sigapApp', ['sigapRoute', 'layout', 'ui.bootstrap',
+    angular.module('sigapApp', ['sigapRoute', 'layout', 'ui.bootstrap',
         'ngAnimate', 'datatables', 'datatables.bootstrap', 'hyperactive.angular.utils', 'ngCookies'
     ]);
 
-    app.run([
+    angular.module('sigapApp').run([
         '$rootScope',
         '$location',
         '$http',

@@ -2,14 +2,13 @@
  * @ngdoc Controller
  * @name Login Controller
  * 
- * @description Controller para login
+ * @description Controller para pagina de login
  * 
  * @author <a href="https://franckaj.github.io/">Franck Aragão</a>
  */
 (function() {
-	var app = angular.module('sigapApp');
 
-	app.controller('LoginController', function($state) {
+	angular.module('sigapApp').controller('LoginController', function($state) {
 		var vm = this;
 		vm.usuario = {};
 

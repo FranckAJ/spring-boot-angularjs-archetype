@@ -1,3 +1,4 @@
+(function() {
 angular.module('layout').directive('headerNotification',
 	function() {
 		return {
@@ -18,3 +19,4 @@ angular.module('layout').directive('headerNotification',
 			controllerAs: 'headerNotificationCtrl'
 		}
 	});
+})();

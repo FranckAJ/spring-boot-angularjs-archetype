@@ -10,34 +10,29 @@
 
 (function(){
   angular.module("sigapApp").factory("pacienteService", function($http){
-    var resultado = {};
 
     /**
 	 * 
 	 */
-	resultado.getPacientes = function(callback) {
+	var _getPacientes = function(callback) {
 		$http.get("paciente").then(function(response) {
 			callback(response.data);
 		});
 	};
 
 	/**
-	 * Salva um paciente na API e retorna uma promisse de sucesso ou erro.
+	 * 
 	 */
-    resultado.salvar = function(paciente, callbackSuccess, callbackError) {
+    var _salvar = function(paciente, callback) {
 		$http.post("paciente", paciente).then(function(response) {
-			callbackSuccess(response.data);
-		}, function(error) {
-			if(error.status == 422) {
-				callbackError(error.data)
-			}
+			callback(response.data);
 		});
 	};
 
     /**
 	 * Altera um treinamento na API
 	 */
-    resultado.alterar = function(paciente, callback) {
+    var _alterar = function(paciente, callback) {
       $http.put("paciente", paciente).then(function(response){
         callback(response.data);
       });
@@ -46,13 +41,18 @@
     /**
 	 * 
 	 */
-    resultado.remover = function(paciente, callback) {
+    var _remover = function(paciente, callback) {
         $http.delete("paciente/" + paciente.id).then(function(response){
           callback(response.data);
         });
       };
 
-    return resultado;
+    return {
+    	getPacientes: _getPacientes,
+    	salvar: _salvar,
+    	alterar: _alterar,
+    	remover: _remover
+    };
     
   });
   

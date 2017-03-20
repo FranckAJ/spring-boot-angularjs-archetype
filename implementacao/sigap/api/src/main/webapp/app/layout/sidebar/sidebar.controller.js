@@ -1,5 +1,11 @@
-angular.module('layout')
-    .controller('SidebarCtrl', ['$scope', '$cookieStore', SidebarCtrl]);
+/**
+ * @ngdoc Controller
+ * @name layout
+ * 
+ * @description controller para o sidebar
+ * 
+ */
+angular.module('layout').controller('SidebarCtrl', ['$scope', '$cookieStore', SidebarCtrl]);
 
 function SidebarCtrl($scope, $cookieStore) {
 

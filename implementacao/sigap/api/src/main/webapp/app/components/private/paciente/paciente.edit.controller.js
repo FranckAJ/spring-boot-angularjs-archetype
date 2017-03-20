@@ -8,9 +8,7 @@
  */
 
 (function() {
-	var app = angular.module("sigapApp");
-
-	app.controller("PacienteModalController", function(pacienteService, $uibModalInstance, growl, paciente) {
+	angular.module("sigapApp").controller("PacienteModalController", function(pacienteService, $uibModalInstance, growl, paciente) {
 		
 		var vm = this;
 		vm.paciente = {};
@@ -21,7 +19,8 @@
 		isEdicao();
 
 		/**
-		 * função realiza edição/cadastro de um funcionario
+	      * @name v.salvar
+	      * @desc edição e cadastro de um paciente
 		 */
 		vm.salvar = function() {
 			vm.loading = true;
@@ -32,16 +31,6 @@
 					angular.copy(response, paciente);
 					vm.loading = false;
 					$uibModalInstance.close(paciente);
-				}, function(validationErrors){
-					var mensagem = "Falha na validação do Paciente<br>";
-					
-					for(i = 0; i < validationErrors.length; i++) {
-						mensagem += validationErrors[i]+"<br>";
-					}
-					
-					growl.warning(mensagem);
-					
-					vm.loading = false;
 				});
 			} else {
 				pacienteService.alterar(vm.paciente, function(response) {
@@ -61,9 +50,11 @@
 			$uibModalInstance.dismiss('cancel');
 		}
 		
-		/**
-		 * 
-		 */
+	      /**
+	      * @name isEdicao
+	      * @desc verifica se um paciente de paramentro é um cadastro ou edição
+	      * @returns {boolean}
+	      */
 		function isEdicao() {
 			if (vm.paciente.id == undefined) {
 				vm.editar = false;

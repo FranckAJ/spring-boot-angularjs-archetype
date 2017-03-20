@@ -1,7 +1,7 @@
 Dicas para manter padrão e evitar dores de cabeça
 ===============
 
-Algumas dicas simples para trabalhar com angularJS. Dicas retiradas do style guides do angular, especificadas por John Papa. Todas as styles guides: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md 
+Algumas dicas simples para trabalhar com angularJS. Dicas seguindo os style guides do angular, especificadas por John Papa. Todas as styles guides: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md 
 
 
 ## Princípio da responsabilidade única
@@ -67,7 +67,7 @@ function SomeController() { }
 
 ## Expressão invocada imediatamente 
 
-<b>Envolva o conteudo dos js controllers/services/directives AngularJS em uma “Immediately Invoked Function Expression” - IIFE.</b> Uma expressão auto invocada, ajudar a previnir colisões de escopos durante uma concatenação e/ou minificação do arquivos js, a IIFE irá deixar as variaveis com escopo blobal esperado.
+<b>Envolva o conteúdo dos js controllers/services/directives AngularJS em uma “Immediately Invoked Function Expression” - IIFE.</b> Uma expressão auto invocada, ajudar a previnir colisões de escopos durante uma concatenação e/ou minificação do arquivos js, a IIFE irá deixar as variaveis com escopo blobal esperado.
 
 ```js
 /**
@@ -119,7 +119,7 @@ function Customer() {
 ```js
 <input ng-model="vm.title"/>
 ```
-## Estrutura e nomeclatura de nomes de arquivos
+## Estrutura de pastas e nomeclatura de nomes de arquivos
 
 ```
 ├── webapp/
@@ -143,7 +143,7 @@ function Customer() {
 │   │   │     │
 ```
 *Defina uma pasta por feature.<br>
-**Crie o nomes de arquivos separando por ponto o nome do tipo `feature.tipo.js` ex: feature.controller.js,                   feature.service.js, feature.filter.js, feature.module.js.<br>
+**Crie o nomes de arquivos separando por ponto o nome do tipo `feature.tipo.js` ex: feature.controller.js, feature.service.js, feature.filter.js, feature.module.js.<br>
 **Para <b>arquivos</b> js com com mais de uma palavra, separe com "-", ou seja, invês de ```headerNotification.directive.js``` use ```header-notification.directive.js```.
 
 ## Comentários
