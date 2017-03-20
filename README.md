@@ -6,10 +6,10 @@ BACKEND
 ===============
 * Java 1.8
 * Spring Boot 1.4.1
-  -Spring Web (Spring MVC)
-  -Spring Data (JPA)
-  -Spring Validation
-  -Spring Security
+* Spring Web (Spring MVC)
+* Spring Data (JPA)
+* Spring Validation
+* Spring Security
 * Spring tests
 * Junit
 * DBunit
