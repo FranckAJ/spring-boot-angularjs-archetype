@@ -22,8 +22,8 @@ Projeto criado em módulos do maven https://maven.apache.org/guides/mini/guide-m
 │   │   │     ├── java
 │   │   │          ├──br.com.hyperactive.sigap.api
 │   │   |── src/test
-│   │   │   	  ├── java
-│   │   │              ├──br.com.hyperactive.sigap.api
+│   │   │     ├── java
+│   │   │          ├──br.com.hyperactive.sigap.api
 |   |	├──── pom.xml
 │   ├── data
 │   │   |
@@ -31,8 +31,8 @@ Projeto criado em módulos do maven https://maven.apache.org/guides/mini/guide-m
 │   │   │     ├── java
 │   │   │          ├──br.com.hyperactive.sigap.data
 │   │   |── src/test
-│   │   │   	  ├── java
-│   │   │              ├──br.com.hyperactive.sigap.data
+│   │   │     ├── java
+│   │   │          ├──br.com.hyperactive.sigap.data
 |   |	├──── pom.xml
 │   ├── domain
 │   │   |
@@ -46,8 +46,8 @@ Projeto criado em módulos do maven https://maven.apache.org/guides/mini/guide-m
 │   │   │     ├── java
 │   │   │          ├──br.com.hyperactive.sigap.service
 │   │   |── src/test
-│   │   │   	  ├── java
-│   │   │              ├──br.com.hyperactive.sigap.service
+│   │   │     ├── java
+│   │   │          ├──br.com.hyperactive.sigap.service
 |   |	├──── pom.xml
 ├── pom.xml
 ```
@@ -55,8 +55,8 @@ Projeto criado em módulos do maven https://maven.apache.org/guides/mini/guide-m
 
 FRONTEND
 ===============
-* AngularJS 1.X
-* Booststrap 3.X
+* AngularJS 1.X (https://angularjs.org/)
+* Booststrap 3.X (getbootstrap.com)
 * Font Awesome 4.7 (http://fontawesome.io/icons/)
 
 ### ESTRUTURA
@@ -71,7 +71,7 @@ Estruta baseada nos style guides do john papa (evagelizador angular).
 │   │   │     |    ├── http.config.js 
 │   │   │     ├── handler				
 │   │   │     |    ├─ ...
-│   │   │     ├── handler				
+│   │   │     ├── inteceptors				
 │   │   │     │    ├─ ...     	
 │   │   │     │
 │   │   ├── components
@@ -130,11 +130,11 @@ USO
 
  * Inicie o tomcat com as configurações do projeto disponiveis em `/configuracao/application.properties`,
  pode ser feito adicionando o seguinte argumento na execução do tomcat: <br>
- ``` -Dspring.config.location="DIRETORIO DO PROJETO/configuracao/application.properties" ```
+ ``` -Dspring.config.location="DIRETORIO DO PROJETO/configuracao/application.properties" ```.
  #####  Isso fará com que as configuraçes do spring possam ser acessadas e alteradas independente de onde a aplicação esteja, isso irá trazer facilidades na transição do projeto para o ambiente de testes e/ou de produção.
- ##### Caso prefira deixar dentro do projeto adicione o application.properties dentro do módulo api em ```src/resources```
+ ##### Caso prefira deixar dentro do projeto adicione o application.properties dentro do módulo api em ```src/resources```.
  
  PONTOS IMPORTANTES
 ===============
-##### Lembre de adicionar a lib do drive do postgres dentro do tomcat na pasta ```lib```
+##### Lembre de adicionar a lib do drive do postgres dentro do tomcat na pasta ```lib```.
  
